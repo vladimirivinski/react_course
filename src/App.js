@@ -3,16 +3,16 @@ import TodoList from './Todo/TodoList';
 
 function App() {
   const [todos, setTodos] = React.useState([
-    { id: 1, complited: false, title: 'Купить хлеб' },
-    { id: 2, complited: false, title: 'Купить масло' },
-    { id: 3, complited: false, title: 'Купить молоко' },
+    { id: 1, completed: false, title: 'Купить хлеб' },
+    { id: 2, completed: true, title: 'Купить масло' },
+    { id: 3, completed: false, title: 'Купить молоко' },
   ]);
 
   function toggleTodo(id) {
     setTodos(
       todos.map((todo) => {
         if (todo.id === id) {
-          todo.complited = !todo.complited;
+          todo.completed = !todo.completed;
         }
         return todo;
       })
